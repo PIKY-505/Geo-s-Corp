@@ -1,2 +1,2 @@
 # Geo-s-Corp
-Poyecto Intermodular de 2º Trimestre
+Proyecto Intermodular de 2º Trimestre de ASIR del XTART
