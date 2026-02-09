@@ -3,12 +3,11 @@
 :root {
   --primary: #00a0e3;
   --secondary: #38bdf8;
+  --terceary: #334155;
   --white: #f1f5f9;
-  --gray: #94a3b8;
+  --gray: #7e7e7e;
   --dark: #1e293b;
-  --pure-white: #ffffff;
   --footer-bg: #111111;
-  --footer-text: #f4f4f4;
 }
 
 body {
@@ -63,7 +62,7 @@ body {
   border-right: 1px solid #334155;
   position: fixed;
   top: 70px;
-  left: -320px; /* Oculto a la izquierda */
+  left: -320px;
   width: 100%;
   max-width: 300px;
   height: calc(100vh - 70px);
@@ -158,16 +157,134 @@ body {
   color: var(--secondary);
 }
 
-/* #endregion --------- Header --------- */
-/* #endregion ----  ---- */
+/* #endregion */
+
+/* #region --------- Footer --------- */
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--gray);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* #endregion  */
+
+/* #endregion */
 
 /* #region ---- Adrián Piqueras Roldán ---- */
 
-.inicio__main {
-  margin-top: 100px;
+.inicio_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Section - Flexbox */
+.inicio_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
   color: var(--white);
-  font-size: 24px;
+}
+
+.inicio_hero_content {
+  flex: 1 1 400px;
+}
+
+.inicio_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.inicio_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.inicio_hero_img_box {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.inicio_hero_img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.inicio_btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--secondary);
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.inicio_btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* Services Section - Grid */
+.inicio_services_title {
   text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.inicio_services_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.inicio_services_card {
+  background-color: var(--terceary);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+.inicio_services_card:hover {
+  background-color: var(--dark);
+}
+
+.inicio_services_img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: var(--gray);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .inicio_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio_hero_title {
+    font-size: 32px;
+  }
 }
 
 /* #endregion ----  ---- */
