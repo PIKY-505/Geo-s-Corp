@@ -626,4 +626,136 @@ body {
 
 /* #region ---- Pedro Antonio Marquina Martín ---- */
 
+.contacto_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.contacto_form_box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.contacto_form_head {
+  background: var(--terceary);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 40px;
+}
+
+.contacto_form_img {
+  height: 80px;
+  width: auto;
+}
+
+.contacto_form_body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.contacto_form_label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-weight: bold;
+}
+
+.contacto_form_input,
+.contacto_form_select,
+.contacto_form_textarea,
+.contacto_form_phone_code {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--dark);
+  font-family: inherit;
+}
+
+.contacto_form_textarea {
+  resize: vertical;
+  font-family: monospace, sans-serif;
+}
+
+.contacto_form_field_full {
+  grid-column: 1 / -1;
+}
+
+.contacto_form_phone_group {
+  display: flex;
+  gap: 10px;
+}
+
+.contacto_form_phone_code {
+  width: auto;
+  text-align: center;
+}
+
+.contacto_form_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-top: 1px solid #f3f3f3;
+}
+
+.contacto_form_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--dark);
+}
+
+.contacto_form_policy {
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--terceary);
+}
+
+.contacto_form_submit {
+  background: var(--secondary);
+  color: var(--dark);
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contacto_form_submit:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .contacto_form_body {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto_form_head {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .contacto_form_actions {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
 /* #endregion ----  ---- */
