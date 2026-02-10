@@ -161,12 +161,51 @@ body {
 
 /* #region --------- Footer --------- */
 
-footer {
+.site-footer {
   background-color: var(--footer-bg);
   color: var(--gray);
-  text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
 }
 
 /* #endregion  */
@@ -252,7 +291,7 @@ footer {
 
 .inicio_services_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -282,18 +321,17 @@ footer {
 /* #region inicio-info */
 .inicio_info {
   background-color: var(--dark);
-  padding: 20px;
+  padding: 30px;
   padding-bottom: 30px;
   border-radius: 15px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .inicio_info_box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
 }
 
 .inicio_info_content {
@@ -310,6 +348,18 @@ footer {
   font-size: 16px;
   line-height: 1.5;
   color: var(--gray);
+}
+
+.inicio_info_text ol {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.inicio_info_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .inicio_info_img_box {
@@ -337,12 +387,112 @@ footer {
   .inicio_hero_title {
     font-size: 32px;
   }
+
+  .inicio_services_grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* #endregion */
 
 /* #endregion */
 
 /* #region ---- Daniel Calvo de Toro ---- */
+
+.empresa_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* #region empresa-hero */
+.empresa_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.empresa_hero_content {
+  flex: 1 1 400px;
+}
+
+.empresa_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.empresa_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.empresa_hero_text ol {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.empresa_hero_img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* #endregion */
+
+/* #region empresa-grid */
+.empresa_values_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.empresa_values_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.empresa_value_card {
+  background-color: var(--dark);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--terceary);
+}
+
+.empresa_value_card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+/* #endregion */
+
+/* #region empresa-media */
+@media (max-width: 768px) {
+  .empresa_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .empresa_values_grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* #endregion */
 
 /* #endregion ----  ---- */
 
