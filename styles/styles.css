@@ -498,6 +498,130 @@ body {
 
 /* #region ---- Nieves Casado Vicente ---- */
 
+.servicios_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* #region servicios-hero */
+.servicios_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.servicios_hero_content {
+  flex: 1 1 400px;
+}
+
+.servicios_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.servicios_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.servicios_hero_list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.servicios_hero_img {
+  flex: 1 1 400px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* #endregion */
+
+/* #region servicios-grid */
+.servicios_details_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.servicios_details_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.servicios_card {
+  background-color: var(--dark);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--white);
+  border: 1px solid var(--terceary);
+  display: flex;
+  flex-direction: column;
+}
+
+.servicios_card:hover {
+  background-color: #253346;
+}
+
+.servicios_card_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.servicios_card_content {
+  padding: 20px;
+}
+
+.servicios_card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.servicios_card p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.servicios_card ol {
+  padding-left: 20px;
+  color: var(--white);
+  margin-bottom: 0;
+}
+/* #endregion */
+
+/* #region servicios-media */
+@media (max-width: 768px) {
+  .servicios_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicios_details_grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* #endregion */
+
 /* #endregion ----  ---- */
 
 /* #region ---- Pedro Antonio Marquina Martín ---- */
