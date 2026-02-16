@@ -634,6 +634,7 @@ body {
   box-sizing: border-box;
 }
 
+/* #region contacto-form */
 .contacto_form_box {
   width: 100%;
   max-width: 1000px;
@@ -740,6 +741,8 @@ body {
   background: var(--primary);
   color: var(--white);
 }
+
+/* #endregion ----  ---- */
 
 @media (max-width: 768px) {
   .contacto_form_body {
