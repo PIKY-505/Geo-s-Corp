@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="icon" href="../img/logo.png" type="image/png" />
+</head>
+
+<body class="page-contacto">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <div class="top-bar">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <a href="inicio-AdrianPiqueras.html" class="header__logo">
+      <img src="../img/logo.png" alt="" />Geo's Corp</a>
+  </div>
+
+  <header class="header">
+    <div class="header__container">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="empresa-DanielCalvo.html">Sobre Nosotros</a></li>
+          <li class="nav__item"><a class="nav__link" href="servicio-NievesCasado.html">Servicios</a></li>
+          <li class="nav__item"><a class="nav__link" href="inicio-AdrianPiqueras.html">Inicio</a></li>
+        </ul>
+      </nav>
+      <a class="header__cta" href="contacto-PedroAntonio.html">Solicitar información</a>
+    </div>
+  </header>
+
+  <main class="contacto_main">
+
+    <!-- BLOQUE 1: FORMULARIO (AHORA ARRIBA) -->
+    <div class="contacto_form_box">
+      <div class="contacto_form_head">
+        <div class="contacto_form_title_box">
+          <h2>¿Dudas? Contáctenos</h2>
+          <p>Complete el formulario y nuestro equipo le responderá a la brevedad.</p>
+        </div>
+        <div class="contacto_form_img_box">
+          <img src="../img/logo.png" alt="Geo's Corp Logo" class="contacto_form_img" />
+        </div>
+      </div>
+
+      <form>
+        <div class="contacto_form_body">
+          <div class="contacto_form_field">
+            <label for="nombre" class="contacto_form_label">Nombre</label>
+            <input id="nombre" type="text" placeholder="Su nombre" class="contacto_form_input" required />
+          </div>
+
+          <div class="contacto_form_field">
+            <label for="apellidos" class="contacto_form_label">Apellidos</label>
+            <input id="apellidos" type="text" placeholder="Sus apellidos" class="contacto_form_input" required />
+          </div>
+
+          <div class="contacto_form_field">
+            <label for="telefono" class="contacto_form_label">Teléfono</label>
+            <div class="contacto_form_phone-group">
+              <span class="contacto_form_phone-code">+34</span>
+              <input id="telefono" type="tel" placeholder="Teléfono" class="contacto_form_input" required />
+            </div>
+          </div>
+
+          <div class="contacto_form_field">
+            <label for="codigo" class="contacto_form_label">Código postal</label>
+            <input id="codigo" type="text" placeholder="00000" class="contacto_form_input" required />
+          </div>
+
+          <div class="contacto_form_field">
+            <label for="email" class="contacto_form_label">Correo Electrónico</label>
+            <input id="email" type="email" placeholder="ejemplo@correo.com" class="contacto_form_input" required />
+          </div>
+
+          <div class="contacto_form_field">
+            <label for="modalidad" class="contacto_form_label">Servicio de interés</label>
+            <select id="modalidad" class="contacto_form_select">
+              <option value="">Seleccione una opción...</option>
+              <option>Diseño de Redes</option>
+              <option>Administración de Sistemas</option>
+              <option>Ciberseguridad</option>
+              <option>Cloud Computing</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="contacto_form_field contacto_form_field_full">
+            <label for="asunto" class="contacto_form_label">Asunto</label>
+            <input id="asunto" type="text" placeholder="Motivo de su consulta" class="contacto_form_input" required />
+          </div>
+
+          <div class="contacto_form_field contacto_form_field_full">
+            <label for="mensaje" class="contacto_form_label">Mensaje</label>
+            <textarea id="mensaje" placeholder="Describa su consulta aquí..." rows="5" class="contacto_form_textarea"
+              required></textarea>
+          </div>
+        </div>
+
+        <div class="contacto_form_actions">
+          <label class="contacto_form_checkbox">
+            <input type="checkbox" required />
+            He leído y acepto la
+            <a href="#" class="contacto_form_policy">Política de Privacidad</a>
+          </label>
+          <button type="submit" class="contacto_form_submit">ENVIAR SOLICITUD</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- BLOQUE 2: MAPA E INFORMACIÓN (AHORA ABAJO) -->
+    <section class="map-section">
+      <div class="map-header">
+        <h2>Nuestra Sede Central - Madrid Centro</h2>
+      </div>
+
+      <div class="map-content-wrapper">
+        <!-- IZQUIERDA: TEXTO -->
+        <div class="map-info-box">
+          <div class="info-group">
+            <h3>📍 Dirección</h3>
+            <p>Paseo de la Castellana, 89<br>28046 Madrid, España</p>
+          </div>
+
+          <div class="info-group">
+            <h3>📞 Atención al Cliente</h3>
+            <p>+34 910 000 000<br>soporte@geoscorp.com</p>
+          </div>
+
+          <div class="info-group">
+            <h3>🕒 Horario de Oficina</h3>
+            <p>Lunes - Viernes: 09:00 - 18:00<br>Fines de semana: Cerrado</p>
+          </div>
+
+          <div class="info-footer">
+            <p>Parking gratuito disponible para clientes.</p>
+          </div>
+        </div>
+
+        <!-- DERECHA: MAPA -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6067753696775!2d-3.705716584606132!3d40.41677537936524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e07a2c589%3A0xc47e3371901a5d4!2sMadrid%20Centro%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Geo's Corp</h3>
+        <p>Transformamos tu infraestructura tecnológica para el futuro.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="inicio-AdrianPiqueras.html">Inicio</a></li>
+          <li><a href="empresa-DanielCalvo.html">Sobre Nosotros</a></li>
+          <li><a href="servicio-NievesCasado.html">Servicios</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Geo's Corp. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

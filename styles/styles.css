@@ -1,0 +1,895 @@
+/* #region ---- general ---- */
+
+:root {
+  --primary: #00a0e3;
+  --secondary: #38bdf8;
+  --terceary: #334155;
+  --white: #f1f5f9;
+  --gray: #7e7e7e;
+  --dark: #1e293b;
+  --footer-bg: #111111;
+}
+
+body {
+  margin: 0;
+  font-family: monospace, sans-serif;
+  background: #0f172a;
+  color: var(--dark);
+}
+
+/* #region --------- Header --------- */
+.nav-toggle {
+  display: none;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--dark);
+  border-bottom: 1px solid #334155;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 1100;
+  box-sizing: border-box;
+}
+
+.nav-toggle-label {
+  position: relative;
+  margin-right: 20px;
+  width: 30px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-toggle-label span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: var(--secondary);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.header {
+  background: var(--dark);
+  border-right: 1px solid #334155;
+  position: fixed;
+  top: 70px;
+  left: -320px;
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 30px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-toggle:checked~.header {
+  left: 0;
+}
+
+.header__container {
+  margin: 0;
+  padding: 0 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.header__logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header__cta {
+  margin-top: 240%;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background: transparent;
+  border: 2px solid var(--secondary);
+  padding: 10px 10px;
+  border-radius: 50px;
+  color: var(--secondary);
+  font-weight: bold;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.header__cta:hover {
+  background: var(--secondary);
+  color: var(--dark);
+}
+
+.header__cta__form {
+  background: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--pure-white);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 25px;
+  padding: 10px 0;
+  position: relative;
+  color: var(--white);
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--secondary);
+}
+
+/* #endregion */
+
+/* #region --------- Footer --------- */
+
+.site-footer {
+  background-color: var(--footer-bg);
+  color: var(--gray);
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+}
+
+/* #endregion  */
+
+/* #endregion */
+
+/* #region ---- Adrián Piqueras Roldán ---- */
+
+.inicio_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* #region inicio-hero */
+.inicio_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.inicio_hero_content {
+  flex: 1 1 400px;
+}
+
+.inicio_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.inicio_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.inicio_hero_img_box {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.inicio_hero_img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.inicio_btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--secondary);
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.inicio_btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* #endregion */
+
+/* #region inicio-grid */
+.inicio_services_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.inicio_services_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.inicio_services_card {
+  background-color: var(--terceary);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+}
+
+.inicio_services_card:hover {
+  background-color: var(--dark);
+}
+
+.inicio_services_img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: var(--gray);
+}
+
+/* #endregion */
+
+/* #region inicio-info */
+.inicio_info {
+  background-color: var(--dark);
+  padding: 30px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.inicio_info_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio_info_content {
+  margin-left: 20px;
+}
+
+.inicio_info_title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.inicio_info_text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.inicio_info_text ol {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.inicio_info_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inicio_info_img_box {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.inicio_info_img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* #endregion */
+
+/* #region inicio-media */
+@media (max-width: 768px) {
+  .inicio_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio_hero_title {
+    font-size: 32px;
+  }
+
+  .inicio_services_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region ---- Daniel Calvo de Toro ---- */
+
+.empresa_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* #region empresa-hero */
+.empresa_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.empresa_hero_content {
+  flex: 1 1 400px;
+}
+
+.empresa_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.empresa_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.empresa_hero_text ol {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.empresa_hero_img {
+  flex: 1 1 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* #endregion */
+
+/* #region empresa-grid */
+.empresa_values_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.empresa_values_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.empresa_value_card {
+  background-color: var(--dark);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--terceary);
+}
+
+.empresa_value_card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+/* #endregion */
+
+/* #region empresa-media */
+@media (max-width: 768px) {
+  .empresa_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .empresa_values_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* #endregion ----  ---- */
+
+/* #region ---- Nieves Casado Vicente ---- */
+
+.servicios_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* #region servicios-hero */
+.servicios_hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: var(--terceary);
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.servicios_hero_content {
+  flex: 1 1 400px;
+}
+
+.servicios_hero_title {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.servicios_hero_text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.servicios_hero_list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.servicios_hero_img {
+  flex: 1 1 400px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* #endregion */
+
+/* #region servicios-grid */
+.servicios_details_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.servicios_details_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.servicios_card {
+  background-color: var(--dark);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--white);
+  border: 1px solid var(--terceary);
+  display: flex;
+  flex-direction: column;
+}
+
+.servicios_card:hover {
+  background-color: #253346;
+}
+
+.servicios_card_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.servicios_card_content {
+  padding: 20px;
+}
+
+.servicios_card h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.servicios_card p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.servicios_card ol {
+  padding-left: 20px;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+/* #endregion */
+
+/* #region servicios-media */
+@media (max-width: 768px) {
+  .servicios_hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicios_details_grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* #endregion */
+
+/* #endregion ----  ---- */
+
+/* #region ---- Refactor Contacto Formal (Pedro) - FINAL ---- */
+
+.page-contacto .contacto_main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+/* --- 1. SECCIÓN MAPA Y TEXTO (SOLUCIÓN LAYOUT) --- */
+.page-contacto .map-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--terceary);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid #475569;
+}
+
+.page-contacto .map-header {
+  padding: 20px 30px;
+  background-color: var(--dark);
+  border-bottom: 2px solid var(--secondary);
+}
+
+.page-contacto .map-header h2 {
+  color: #ffffff !important;
+  font-size: 22px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* CONTENEDOR FLEX: Texto a la izquierda, Mapa a la derecha */
+.page-contacto .map-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* Asegura que estén lado a lado */
+  min-height: 400px;
+}
+
+/* IZQUIERDA: TEXTO */
+.page-contacto .map-info-box {
+  flex: 1;
+  padding: 40px;
+  background-color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.page-contacto .info-group h3 {
+  color: #ffffff !important;
+  /* CAMBIO: Letras en blanco (antes cyan) */
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.page-contacto .info-group p {
+  margin: 0;
+  font-size: 15px;
+  color: #ffffff !important;
+  /* CAMBIO: Letras en blanco */
+  line-height: 1.6;
+}
+
+.page-contacto .info-footer p {
+  color: #ffffff !important;
+  /* CAMBIO: Letras en blanco */
+  font-size: 13px;
+  font-style: italic;
+  border-top: 1px solid #475569;
+  padding-top: 15px;
+}
+
+/* DERECHA: MAPA */
+.page-contacto .map-container {
+  flex: 1.5;
+  background-color: #000;
+  position: relative;
+}
+
+.page-contacto .map-container iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+/* --- 2. SECCIÓN FORMULARIO (CORRECCIÓN OSCURA) --- */
+.page-contacto .contacto_form_box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--terceary) !important;
+  border: 1px solid #475569;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.page-contacto .contacto_form_head {
+  background-color: var(--dark) !important;
+  padding: 30px 40px;
+  border-bottom: 1px solid #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-contacto .contacto_form_title_box h2 {
+  color: #ffffff !important;
+  /* CAMBIO: Letras en blanco (antes cyan) */
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.page-contacto .contacto_form_title_box p {
+  color: #cccccc !important;
+  margin: 0;
+}
+
+.page-contacto .contacto_form_img {
+  height: 60px;
+  width: auto;
+}
+
+.page-contacto .contacto_form_body {
+  padding: 40px;
+  background-color: var(--terceary) !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Inputs Oscuros */
+.page-contacto .contacto_form_label {
+  color: #ffffff !important;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.page-contacto .contacto_form_input,
+.page-contacto .contacto_form_select,
+.page-contacto .contacto_form_textarea,
+.page-contacto .contacto_form_phone-code {
+  background-color: var(--dark) !important;
+  border: 1px solid #475569 !important;
+  color: #ffffff !important;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.page-contacto .contacto_form_textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Estilos de foco */
+.page-contacto .contacto_form_input:focus,
+.page-contacto .contacto_form_textarea:focus {
+  border-color: var(--secondary) !important;
+  outline: none;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.page-contacto .contacto_form_field {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-contacto .contacto_form_field_full {
+  grid-column: 1 / -1;
+}
+
+.page-contacto .contacto_form_phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.page-contacto .contacto_form_phone-code {
+  width: 70px;
+  text-align: center;
+}
+
+.page-contacto .contacto_form_actions {
+  background-color: var(--dark) !important;
+  padding: 25px 40px;
+  border-top: 1px solid #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-contacto .contacto_form_checkbox {
+  color: #cccccc !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.page-contacto .contacto_form_policy {
+  color: var(--secondary) !important;
+}
+
+.page-contacto .contacto_form_submit {
+  background-color: var(--secondary) !important;
+  color: var(--dark) !important;
+  font-weight: 800;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.page-contacto .contacto_form_submit:hover {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .page-contacto .map-content-wrapper {
+    flex-direction: column;
+    /* En móvil se apila */
+  }
+
+  .page-contacto .map-container {
+    height: 300px;
+    flex: none;
+  }
+
+  .page-contacto .contacto_form_body {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .page-contacto .contacto_form_head,
+  .page-contacto .contacto_form_actions {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .page-contacto .contacto_form_submit {
+    width: 100%;
+  }
+}
+
+/* #endregion */
