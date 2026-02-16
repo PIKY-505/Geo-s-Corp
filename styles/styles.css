@@ -74,7 +74,7 @@ body {
   z-index: 1000;
 }
 
-.nav-toggle:checked~.header {
+.nav-toggle:checked ~ .header {
   left: 0;
 }
 
@@ -496,6 +496,8 @@ body {
   }
 }
 
+/* #endregion */
+
 /* #endregion ----  ---- */
 
 /* #region ---- Nieves Casado Vicente ---- */
@@ -629,9 +631,9 @@ body {
 
 /* #endregion ----  ---- */
 
-/* #region ---- Refactor Contacto Formal (Pedro) - FINAL ---- */
+/* #region ---- Pedro Antonio ---- */
 
-.page-contacto .contacto_main {
+.contacto_main {
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -639,8 +641,8 @@ body {
   padding-bottom: 60px;
 }
 
-/* --- 1. SECCIÓN MAPA Y TEXTO (SOLUCIÓN LAYOUT) --- */
-.page-contacto .map-section {
+/* #region contacto-hero */
+.contacto_map {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -651,13 +653,13 @@ body {
   border: 1px solid #475569;
 }
 
-.page-contacto .map-header {
+.contacto_map_header {
   padding: 20px 30px;
   background-color: var(--dark);
   border-bottom: 2px solid var(--secondary);
 }
 
-.page-contacto .map-header h2 {
+.contacto_map_header h2 {
   color: #ffffff !important;
   font-size: 22px;
   margin: 0;
@@ -666,16 +668,13 @@ body {
   gap: 12px;
 }
 
-/* CONTENEDOR FLEX: Texto a la izquierda, Mapa a la derecha */
-.page-contacto .map-content-wrapper {
+.contacto_map_wrapper {
   display: flex;
   flex-direction: row;
-  /* Asegura que estén lado a lado */
   min-height: 400px;
 }
 
-/* IZQUIERDA: TEXTO */
-.page-contacto .map-info-box {
+.contacto_map_info {
   flex: 1;
   padding: 40px;
   background-color: #1e293b;
@@ -685,48 +684,46 @@ body {
   gap: 25px;
 }
 
-.page-contacto .info-group h3 {
+.contacto_map_group h3 {
   color: #ffffff !important;
-  /* CAMBIO: Letras en blanco (antes cyan) */
   font-size: 16px;
   margin: 0 0 8px 0;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.page-contacto .info-group p {
+.contacto_map_group p {
   margin: 0;
   font-size: 15px;
   color: #ffffff !important;
-  /* CAMBIO: Letras en blanco */
   line-height: 1.6;
 }
 
-.page-contacto .info-footer p {
+.contacto_map_footer p {
   color: #ffffff !important;
-  /* CAMBIO: Letras en blanco */
   font-size: 13px;
   font-style: italic;
   border-top: 1px solid #475569;
   padding-top: 15px;
 }
 
-/* DERECHA: MAPA */
-.page-contacto .map-container {
+.contacto_map_frame {
   flex: 1.5;
   background-color: #000;
   position: relative;
 }
 
-.page-contacto .map-container iframe {
+.contacto_map_frame iframe {
   width: 100%;
   height: 100%;
   display: block;
   filter: grayscale(20%) contrast(1.1);
 }
+/* #endregion */
 
-/* --- 2. SECCIÓN FORMULARIO (CORRECCIÓN OSCURA) --- */
-.page-contacto .contacto_form_box {
+/* #region contacto-grid */
+
+.contacto_form_box {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -737,7 +734,7 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.page-contacto .contacto_form_head {
+.contacto_form_head {
   background-color: var(--dark) !important;
   padding: 30px 40px;
   border-bottom: 1px solid #475569;
@@ -746,24 +743,23 @@ body {
   align-items: center;
 }
 
-.page-contacto .contacto_form_title_box h2 {
+.contacto_form_title_box h2 {
   color: #ffffff !important;
-  /* CAMBIO: Letras en blanco (antes cyan) */
   font-size: 26px;
   margin-bottom: 10px;
 }
 
-.page-contacto .contacto_form_title_box p {
+.contacto_form_title_box p {
   color: #cccccc !important;
   margin: 0;
 }
 
-.page-contacto .contacto_form_img {
+.contacto_form_img {
   height: 60px;
   width: auto;
 }
 
-.page-contacto .contacto_form_body {
+.contacto_form_body {
   padding: 40px;
   background-color: var(--terceary) !important;
   display: grid;
@@ -771,8 +767,7 @@ body {
   gap: 25px;
 }
 
-/* Inputs Oscuros */
-.page-contacto .contacto_form_label {
+.contacto_form_label {
   color: #ffffff !important;
   font-weight: bold;
   margin-bottom: 8px;
@@ -781,10 +776,10 @@ body {
   font-size: 13px;
 }
 
-.page-contacto .contacto_form_input,
-.page-contacto .contacto_form_select,
-.page-contacto .contacto_form_textarea,
-.page-contacto .contacto_form_phone-code {
+.contacto_form_input,
+.contacto_form_select,
+.contacto_form_textarea,
+.contacto_form_phone-code {
   background-color: var(--dark) !important;
   border: 1px solid #475569 !important;
   color: #ffffff !important;
@@ -795,39 +790,38 @@ body {
   font-family: inherit;
 }
 
-.page-contacto .contacto_form_textarea {
+.contacto_form_textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-/* Estilos de foco */
-.page-contacto .contacto_form_input:focus,
-.page-contacto .contacto_form_textarea:focus {
+.contacto_form_input:focus,
+.contacto_form_textarea:focus {
   border-color: var(--secondary) !important;
   outline: none;
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
-.page-contacto .contacto_form_field {
+.contacto_form_field {
   display: flex;
   flex-direction: column;
 }
 
-.page-contacto .contacto_form_field_full {
+.contacto_form_field_full {
   grid-column: 1 / -1;
 }
 
-.page-contacto .contacto_form_phone-group {
+.contacto_form_phone-group {
   display: flex;
   gap: 10px;
 }
 
-.page-contacto .contacto_form_phone-code {
+.contacto_form_phone-code {
   width: 70px;
   text-align: center;
 }
 
-.page-contacto .contacto_form_actions {
+.contacto_form_actions {
   background-color: var(--dark) !important;
   padding: 25px 40px;
   border-top: 1px solid #475569;
@@ -836,18 +830,18 @@ body {
   align-items: center;
 }
 
-.page-contacto .contacto_form_checkbox {
+.contacto_form_checkbox {
   color: #cccccc !important;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.page-contacto .contacto_form_policy {
+.contacto_form_policy {
   color: var(--secondary) !important;
 }
 
-.page-contacto .contacto_form_submit {
+.contacto_form_submit {
   background-color: var(--secondary) !important;
   color: var(--dark) !important;
   font-weight: 800;
@@ -858,38 +852,40 @@ body {
   text-transform: uppercase;
 }
 
-.page-contacto .contacto_form_submit:hover {
+.contacto_form_submit:hover {
   background-color: var(--primary) !important;
   color: #ffffff !important;
 }
+/* #endregion */
 
+/* #region contacto-media */
 /* MÓVIL */
 @media (max-width: 768px) {
-  .page-contacto .map-content-wrapper {
+  .contacto_map_wrapper {
     flex-direction: column;
-    /* En móvil se apila */
   }
 
-  .page-contacto .map-container {
+  .contacto_map_frame {
     height: 300px;
     flex: none;
   }
 
-  .page-contacto .contacto_form_body {
+  .contacto_form_body {
     grid-template-columns: 1fr;
     padding: 20px;
   }
 
-  .page-contacto .contacto_form_head,
-  .page-contacto .contacto_form_actions {
+  .contacto_form_head,
+  .contacto_form_actions {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
 
-  .page-contacto .contacto_form_submit {
+  .contacto_form_submit {
     width: 100%;
   }
 }
-
 /* #endregion */
+
+/* #endregion ----  ---- */
