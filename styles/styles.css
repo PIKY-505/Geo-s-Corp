@@ -3,7 +3,7 @@
 :root {
   --primary: #00a0e3;
   --secondary: #38bdf8;
-  --terceary: #334155;
+  --tertiary: #334155;
   --white: #f1f5f9;
   --gray: #7e7e7e;
   --dark: #1e293b;
@@ -229,7 +229,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  background-color: var(--terceary);
+  background-color: var(--tertiary);
   padding: 40px;
   border-radius: 15px;
   margin-bottom: 60px;
@@ -296,7 +296,7 @@ body {
 }
 
 .inicio_services_card {
-  background-color: var(--terceary);
+  background-color: var(--tertiary);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -391,6 +391,12 @@ body {
   .inicio_services_grid {
     grid-template-columns: 1fr;
   }
+
+  .inicio_hero_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 /* #endregion */
@@ -411,7 +417,7 @@ body {
 .empresa_hero {
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--terceary);
+  background-color: var(--tertiary);
   padding: 40px;
   border-radius: 15px;
   margin-bottom: 60px;
@@ -450,7 +456,7 @@ body {
 
 /* #endregion */
 
-/* #region empresa-grid */
+/* #region empresa-grid-1 */
 .empresa_values_title {
   text-align: center;
   color: var(--white);
@@ -471,7 +477,7 @@ body {
   border-radius: 10px;
   text-align: center;
   color: var(--white);
-  border: 1px solid var(--terceary);
+  border: 1px solid var(--tertiary);
 }
 
 .empresa_value_card h3 {
@@ -479,6 +485,60 @@ body {
   margin-bottom: 15px;
 }
 
+/* #endregion */
+
+/* #region empresa-grid-2 */
+.empresa_equipo_title {
+  text-align: center;
+  color: var(--white);
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.empresa_equipo_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.empresa_equipo_card {
+  background-color: var(--dark);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--white);
+  border: 1px solid var(--tertiary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.empresa_equipo_card:hover {
+  background-color: #253346;
+}
+
+.empresa_equipo_img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid var(--secondary);
+}
+
+.empresa_equipo_card h3 {
+  color: var(--secondary);
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.empresa_equipo_card p {
+  color: var(--gray);
+  font-size: 14px;
+  margin: 0;
+}
 /* #endregion */
 
 /* #region empresa-media */
@@ -490,6 +550,17 @@ body {
 
   .empresa_values_grid {
     grid-template-columns: 1fr;
+  }
+
+  .empresa_equipo_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .empresa_hero_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex: none;
   }
 }
 
@@ -514,7 +585,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  background-color: var(--terceary);
+  background-color: var(--tertiary);
   padding: 40px;
   border-radius: 15px;
   margin-bottom: 60px;
@@ -573,7 +644,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   color: var(--white);
-  border: 1px solid var(--terceary);
+  border: 1px solid var(--tertiary);
   display: flex;
   flex-direction: column;
 }
@@ -622,6 +693,22 @@ body {
   .servicios_details_grid {
     grid-template-columns: 1fr;
   }
+
+  .servicios_hero_img {
+    width: 100%;
+    flex: none;
+  }
+
+  .inicio_hero_img_box {
+    width: 100%;
+    flex: auto;
+  }
+
+  .inicio_hero_img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 /* #endregion */
@@ -643,7 +730,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: var(--terceary);
+  background-color: var(--tertiary);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
@@ -657,7 +744,7 @@ body {
 }
 
 .contacto_map_header h2 {
-  color: #ffffff !important;
+  color: #ffffff;
   font-size: 22px;
   margin: 0;
   display: flex;
@@ -682,7 +769,7 @@ body {
 }
 
 .contacto_map_group h3 {
-  color: #ffffff !important;
+  color: #ffffff;
   font-size: 16px;
   margin: 0 0 8px 0;
   text-transform: uppercase;
@@ -692,12 +779,12 @@ body {
 .contacto_map_group p {
   margin: 0;
   font-size: 15px;
-  color: #ffffff !important;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 .contacto_map_footer p {
-  color: #ffffff !important;
+  color: #ffffff;
   font-size: 13px;
   font-style: italic;
   border-top: 1px solid #475569;
@@ -724,7 +811,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: var(--terceary) !important;
+  background-color: var(--tertiary);
   border: 1px solid #475569;
   border-radius: 15px;
   overflow: hidden;
@@ -732,7 +819,7 @@ body {
 }
 
 .contacto_form_head {
-  background-color: var(--dark) !important;
+  background-color: var(--dark);
   padding: 30px 40px;
   border-bottom: 1px solid #475569;
   display: flex;
@@ -741,13 +828,13 @@ body {
 }
 
 .contacto_form_title_box h2 {
-  color: #ffffff !important;
+  color: #ffffff;
   font-size: 26px;
   margin-bottom: 10px;
 }
 
 .contacto_form_title_box p {
-  color: #cccccc !important;
+  color: #cccccc;
   margin: 0;
 }
 
@@ -758,14 +845,14 @@ body {
 
 .contacto_form_body {
   padding: 40px;
-  background-color: var(--terceary) !important;
+  background-color: var(--tertiary);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
 .contacto_form_label {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 8px;
   display: block;
@@ -777,9 +864,9 @@ body {
 .contacto_form_select,
 .contacto_form_textarea,
 .contacto_form_phone-code {
-  background-color: var(--dark) !important;
-  border: 1px solid #475569 !important;
-  color: #ffffff !important;
+  background-color: var(--dark);
+  border: 1px solid #475569;
+  color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   width: 100%;
@@ -794,7 +881,7 @@ body {
 
 .contacto_form_input:focus,
 .contacto_form_textarea:focus {
-  border-color: var(--secondary) !important;
+  border-color: var(--secondary);
   outline: none;
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
@@ -819,7 +906,7 @@ body {
 }
 
 .contacto_form_actions {
-  background-color: var(--dark) !important;
+  background-color: var(--dark);
   padding: 25px 40px;
   border-top: 1px solid #475569;
   display: flex;
@@ -828,19 +915,19 @@ body {
 }
 
 .contacto_form_checkbox {
-  color: #cccccc !important;
+  color: #cccccc;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .contacto_form_policy {
-  color: var(--secondary) !important;
+  color: var(--secondary);
 }
 
 .contacto_form_submit {
-  background-color: var(--secondary) !important;
-  color: var(--dark) !important;
+  background-color: var(--secondary);
+  color: var(--dark);
   font-weight: 800;
   padding: 15px 35px;
   border-radius: 50px;
@@ -850,8 +937,8 @@ body {
 }
 
 .contacto_form_submit:hover {
-  background-color: var(--primary) !important;
-  color: #ffffff !important;
+  background-color: var(--primary);
+  color: #ffffff;
 }
 /* #endregion */
 
